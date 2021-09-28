@@ -1,0 +1,18 @@
+.door {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 15px;
+
+  /* TEMP */
+  width: 200px;
+  height: 310px;
+
+  background-color: #795548;
+  color: #d9e3f0;
+}
+
+.numero {
+  font-size: 3rem;
+  font-weight: bolder;
+}

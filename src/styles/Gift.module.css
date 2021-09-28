@@ -1,0 +1,34 @@
+.gift {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.top {
+  width: 100px;
+  height: 25px;
+  background-color: #7c1c1c;
+  border-radius: 10px 10px 5px 5px;
+}
+.middle {
+  width: 90px;
+  height: 60px;
+  background-color: #581616;
+  border-radius: 0px 0px 5px 5px;
+}
+
+.line1 {
+  position: absolute;
+  width: 10px;
+  height: 85px;
+  background-color: #c79b21;
+}
+
+.line2 {
+  position: absolute;
+  top: 40px;
+  width: 90px;
+  height: 10px;
+  background-color: #c79b21;
+}
