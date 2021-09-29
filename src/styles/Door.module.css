@@ -1,13 +1,29 @@
+.area {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: var(--area-door-width);
+  height: var(--area-door-heigth);
+  margin: 5px;
+}
+
+.frame {
+  display: flex;
+  flex-grow: 1;
+  border-left: 5px solid #4e362e;
+  border-top: 5px solid #4e362e;
+  border-right: 5px solid #4e362e;
+  background-color: #0009;
+  width: 90%;
+}
+
 .door {
   display: flex;
   flex-direction: column;
   align-items: center;
+  flex-grow: 1;
   padding: 15px;
-
-  /* TEMP */
-  width: 200px;
-  height: 310px;
-
   background-color: #795548;
   color: #d9e3f0;
 }
@@ -15,4 +31,35 @@
 .numero {
   font-size: 3rem;
   font-weight: bolder;
+}
+
+.knob {
+  position: absolute;
+  display: flex;
+  align-self: flex-start;
+  top: 140px;
+  height: 20px;
+  width: 20px;
+  border-radius: 10px;
+  background-color: #4e362e;
+}
+
+.ground {
+  height: 10px;
+  width: 100%;
+  background-color: #847975;
+}
+
+.selected {
+  border-left: 5px solid #1273de;
+  border-top: 5px solid #1273de;
+  border-right: 5px solid #1273de;
+}
+
+.selected .numero {
+  color: #1273de;
+}
+
+.selected .knob {
+  background-color: #1273de;
 }
