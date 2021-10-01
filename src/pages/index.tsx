@@ -19,7 +19,7 @@ export default function Home() {
       <div>
         <Card > <NumberInput text="Gift?" value={isGifted} onChange={newGift => setIsGifted(newGift)}/> </Card>
         <Card bgColor="#555555" >
-          <Link href={`/game/${qntDoors}/${isGifted}`}>
+          <Link href={`/game/${qntDoors}/${isGifted}`} passHref>
             <h2 className={styles.link}>
               Start
             </h2>

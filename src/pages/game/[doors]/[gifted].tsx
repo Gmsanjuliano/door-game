@@ -1,13 +1,11 @@
 import { useEffect, useState } from "react";
 import Door from "../../../components/Door";
-import Gift from "../../../components/Gift";
 import { createDoors, updateDoors } from "../../../functions/doors";
-import DoorModel from "../../../model/door";
 import styles from "../../../styles/Game.module.css"
 import Link from "next/link"
 import { useRouter } from "next/router"
 
-export default function game() {
+export default function Game() {
   const router = useRouter()
 
   const [ok, setOk] = useState(false)
@@ -20,7 +18,7 @@ export default function game() {
     const okGift = gifted >= 1 && gifted <= doors
 
     setOk(okDoors && okGift)
-  }, [doors])
+  }, [doors, router.query.doors, router.query.gifted])
 
   useEffect(() => {
     const doors = +router.query.doors
@@ -43,7 +41,7 @@ export default function game() {
         </div> }
       </div>
       <div>
-        <Link href="/">
+        <Link href="/" passHref>
           <button className={styles.btn}>Restart Game</button>
         </Link>
       </div>

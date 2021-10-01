@@ -1,7 +1,9 @@
 {
   "/_app": "pages/_app.js",
+  "/api/hello": "pages/api/hello.js",
+  "/game/[doors]/[gifted]": "pages/game/[doors]/[gifted].html",
+  "/": "pages/index.html",
   "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
-  "/game/[doors]/[gifted]": "pages/game/[doors]/[gifted].js",
-  "/": "pages/index.js"
+  "/404": "pages/404.html"
 }
