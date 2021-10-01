@@ -1,0 +1,40 @@
+.numberInput {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #000;
+}
+
+.text {
+  color: #000;
+  font-size: 2rem;
+}
+
+.value {
+  font-size: 6rem;
+}
+
+.buttons {
+  display: flex;
+}
+
+.btn {
+  background-color: #abb8c3;
+  color: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 3rem;
+  height: 80px;
+  width: 80px;
+  margin: 5px;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 5px 5px #b6c2cd;
+}
+
+.btn:hover {
+  background-color: #b6c2cd;
+}

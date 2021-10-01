@@ -1,13 +1,31 @@
+import Card from "../components/Card";
+import styles from "../styles/Home.module.css"
+import Link from "next/link";
+import NumberInput from "../components/NumberInput";
 import { useState } from "react";
-import Door from "../components/Door";
-import Gift from "../components/Gift";
-import DoorModel from "../model/door";
 
 export default function Home() {
-  const [p1, setP1] = useState(new DoorModel(1));
+  const [qntDoors, setQntDoors] = useState(3)
+  const [isGifted, setIsGifted] = useState(1)
+  
   return (
-    <div style={{ display: "flex" }}>
-      <Door value={p1} onChange={newDoor => setP1(newDoor)} />
+    <div className={styles.home}>
+      <div>
+        <Card bgColor="#c0392c"><h1>Doors Game</h1></Card>
+        <Card>
+          <NumberInput text="Doors?" value={qntDoors} onChange={newQnt => setQntDoors(newQnt)}/>
+        </Card>
+      </div>
+      <div>
+        <Card > <NumberInput text="Gift?" value={isGifted} onChange={newGift => setIsGifted(newGift)}/> </Card>
+        <Card bgColor="#555555" >
+          <Link href={`/game/${qntDoors}/${isGifted}`}>
+            <h2 className={styles.link}>
+              Start
+            </h2>
+          </Link>
+        </Card>
+      </div>
     </div>
-  );
+  )
 }
